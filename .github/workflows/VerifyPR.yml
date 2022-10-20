@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
+    # if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
     runs-on: ubuntu-latest
 
     steps:
@@ -64,3 +64,13 @@ jobs:
 
     - name: Verify NON_EQUIVALENT
       run: make NON_EQUIVALENT=1
+
+    - name: Update decomp score in README
+      run: ./score.sh --update-readme
+
+    - name: Update PR
+      uses: test-room-7/action-update-file@v1
+      with:
+        file-path: README.md
+        commit-msg: Update score in README
+        github-token: ${{ secrets.GITHUB_TOKEN }}
