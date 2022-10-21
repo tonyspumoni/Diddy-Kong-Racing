@@ -1,4 +1,4 @@
-name: Resources
+name: Update Score
 on: repository_dispatch
 jobs:
     resources:
@@ -9,10 +9,10 @@ jobs:
 
             - uses: actions/setup-node@v1
 
-            - name: Fetch resources
+            - name: Generate updated README
               run: ./score.sh --update-readme
 
-            - name: Update resources
+            - name: Update PR
               uses: test-room-7/action-update-file@v1
               with:
                   file-path: README.md
