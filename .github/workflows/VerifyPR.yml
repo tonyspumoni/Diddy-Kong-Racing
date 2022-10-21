@@ -32,7 +32,7 @@ jobs:
       run: |
         wget -q -O ido-static-recomp.tar.gz https://github.com/decompals/ido-static-recomp/releases/download/v0.1/ido-5.3-recomp-ubuntu-latest.tar.gz
         mkdir -p tools/ido-static-recomp/build5.3/out
-        tar -xvzf tools/ido-static-recomp.tar.gz -C tools/ido-static-recomp/build5.3/out
+        tar -xvzf ido-static-recomp.tar.gz -C tools/ido-static-recomp/build5.3/out
 
     #- name: Build Recomp
     #  run: |
