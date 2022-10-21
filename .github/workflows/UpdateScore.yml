@@ -1,5 +1,7 @@
 name: Update Score
-on: repository_dispatch
+on:
+  pull_request_target:
+    branches: [ master ]
 jobs:
     resources:
         name: Update Score
