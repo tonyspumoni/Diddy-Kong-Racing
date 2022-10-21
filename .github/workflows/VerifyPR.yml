@@ -64,3 +64,21 @@ jobs:
 
     - name: Verify NON_EQUIVALENT
       run: make NON_EQUIVALENT=1
+  update-score:
+    name: Update Score
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+
+      - name: Generate updated README
+        run: ./score.sh --update-readme
+
+      - name: Update PR
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: README.md
+          commit-msg: Update score in README
+          github-token: ${{ secrets.GITHUB_TOKEN }}
