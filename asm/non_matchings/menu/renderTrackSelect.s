@@ -5,7 +5,7 @@ glabel D_800E84D8
 .float 1.2
 
 .text
-glabel func_8008FA54
+glabel renderTrackSelect
 /* 090654 8008FA54 27BDFF80 */  addiu $sp, $sp, -0x80
 /* 090658 8008FA58 3C0E8012 */  lui   $t6, %hi(D_80126478) # $t6, 0x8012
 /* 09065C 8008FA5C 3C188000 */  lui   $t8, %hi(osTvType) # $t8, 0x8000
@@ -59,7 +59,7 @@ glabel func_8008FA54
 /* 090714 8008FB14 00402025 */   move  $a0, $v0
 /* 090718 8008FB18 16420004 */  bne   $s2, $v0, .L8008FB2C
 /* 09071C 8008FB1C 00002025 */   move  $a0, $zero
-/* 090720 8008FB20 0C031059 */  jal   func_800C4164
+/* 090720 8008FB20 0C031059 */  jal   set_kerning
 /* 090724 8008FB24 24040001 */   li    $a0, 1
 /* 090728 8008FB28 00002025 */  move  $a0, $zero
 .L8008FB2C:
@@ -99,7 +99,7 @@ glabel func_8008FA54
 /* 0907AC 8008FBAC 02403825 */   move  $a3, $s2
 /* 0907B0 8008FBB0 3C018012 */  lui   $at, %hi(D_801269F0) # $at, 0x8012
 /* 0907B4 8008FBB4 AC3269F0 */  sw    $s2, %lo(D_801269F0)($at)
-/* 0907B8 8008FBB8 0C031059 */  jal   func_800C4164
+/* 0907B8 8008FBB8 0C031059 */  jal   set_kerning
 /* 0907BC 8008FBBC 00002025 */   move  $a0, $zero
 .L8008FBC0:
 /* 0907C0 8008FBC0 3C138012 */  lui   $s3, %hi(sMenuCurrDisplayList) # $s3, 0x8012

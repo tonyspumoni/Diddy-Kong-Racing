@@ -253,7 +253,7 @@ typedef struct TitleScreenDemos {
 } TitleScreenDemos;
 
 /* Size 0x10 bytes */
-typedef struct unk80126930 {
+typedef struct TrackRenderDetails {
   /* 0x00 */ char *levelName;
   /* 0x04 */ char *unk4;
   /* 0x08 */ s16 xPos;
@@ -267,7 +267,7 @@ typedef struct unk80126930 {
         };
         /* 0x0E */ u16 unkE;
     };
-} unk80126930;
+} TrackRenderDetails;
 
 extern s8  D_800DF450;
 extern f32 D_800DF454;
@@ -695,20 +695,20 @@ extern s8 gControllersYAxisDirection[4];
 extern TextureHeader *D_80126550[128];
 extern s32 D_801267D0;
 extern u8 D_801269C4[4];
-extern f32 D_801269DC;
-extern f32 D_801269E4;
+extern f32 gTrackSelectX;
+extern f32 gTrackSelectY;
 extern f32 D_801269E8;
 extern f32 D_801269EC;
 extern s8 gPlayerSelectVehicle[4];
-extern s16 D_80126918;
+extern s16 gFFLUnlocked;
 extern s32 D_801263D8;
 extern s32 D_80126480;
 //extern s32 D_801268E8[12];
-extern s16 D_80126918;
+extern s16 gFFLUnlocked;
 extern s32 D_80126924;
 extern s32 D_80126928;
 extern s32 D_8012692C;
-extern unk80126930 D_80126930[9];
+extern TrackRenderDetails gTrackSelectRenderDetails[9];
 extern s32 D_801269F0;
 extern s32 D_801269F4;
 extern s32 D_801269F8;
@@ -918,9 +918,9 @@ void func_80080580(Gfx **arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5,
 void func_800853D0(unk800861C8 *arg0, s32 arg1, s32 arg2);
 void render_enter_filename_ui(UNUSED s32 unused);
 void func_8008D8BC(s32 updateRate);
-void func_8008FA54(s32 arg0, s32 arg1, s8 *arg2, s8 *arg3, s32 arg4, s32 arg5, s32 arg6, DrawTexture *arg7, s32 arg8);
+void renderTrackSelect(s32 arg0, s32 arg1, s8 *arg2, s8 *arg3, s32 arg4, s32 arg5, s32 arg6, DrawTexture *arg7, s32 arg8);
 //Possible names
-//void func_8008FA54(s32 xPos, s32 yPos, char *levelName, char *arg3, s32 colour, s32 imageId, s32 copyViewPort, DrawTexture *arg7, s32 arg8);
+//void renderTrackSelect(s32 xPos, s32 yPos, char *levelName, char *arg3, s32 colour, s32 imageId, s32 copyViewPort, DrawTexture *arg7, s32 arg8);
 s32 func_80095728(Gfx **gfx, Mtx **mtx, VertexList **vtx, s32 updateRate);
 
 typedef enum MenuTextures {
