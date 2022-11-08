@@ -65,8 +65,6 @@ jobs:
 
     - name: Update score
       run: ./update-score.sh
-
-    - name: Suggest updated score
       uses: gr2m/create-or-update-pull-request-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
