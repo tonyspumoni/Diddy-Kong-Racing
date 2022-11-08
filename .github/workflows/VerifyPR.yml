@@ -67,9 +67,6 @@ jobs:
       run: ./update-score.sh
 
     - name: Suggest updated score
-      uses: reviewdog/action-suggester@v1
-      with:
-        tool_name: update-score
-        level: 'info'
-        fail_on_error: 'true'
-        reviewdog_flags: '-tee -reporter github-pr-review'
+      uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
