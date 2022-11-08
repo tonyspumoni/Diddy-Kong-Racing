@@ -57,6 +57,8 @@ jobs:
 
     - name: Update PR w/ score
       uses: gr2m/create-or-update-pull-request-action@v1
+      with:
+        commit-message: "Update README score"
       env:
         GITHUB_TOKEN: ${{ secrets.UPDATE_SCORE_TOKEN }}
 
