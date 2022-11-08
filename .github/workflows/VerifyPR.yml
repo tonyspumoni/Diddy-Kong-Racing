@@ -58,7 +58,7 @@ jobs:
     - name: Update PR w/ score
       uses: gr2m/create-or-update-pull-request-action@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.UPDATE_SCORE_TOKEN }}
 
     - name: Clean Build
       run: make clean
