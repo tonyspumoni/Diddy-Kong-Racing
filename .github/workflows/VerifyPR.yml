@@ -16,6 +16,7 @@ jobs:
         submodules: recursive
         ref: ${{ github.event.pull_request.head.ref }}
         repository: ${{ github.event.pull_request.head.repo.full_name }}
+        persist-credentials: false
 
     - name: Install packages
       run: |
@@ -66,5 +67,5 @@ jobs:
     - name: Update score
       run: ./update-score.sh
       uses: gr2m/create-or-update-pull-request-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
