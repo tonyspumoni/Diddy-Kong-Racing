@@ -52,6 +52,14 @@ jobs:
     - name: Verify Build
       run: if [[ $(sha1sum -c --quiet sha1/dkr.us_1.0.sha1) = "" ]]; then echo "Signature OK"; else echo "Failed"; exit 1; fi
 
+    - name: Update score
+      run: ./update-score.sh
+
+    - name: Update PR w/ score
+      uses: gr2m/create-or-update-pull-request-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Clean Build
       run: make clean
 
@@ -63,11 +71,3 @@ jobs:
 
     - name: Verify NON_EQUIVALENT
       run: make -j4 NON_EQUIVALENT=1
-
-    - name: Update score
-      run: ./update-score.sh
-
-    - name: Update PR w/ score
-      uses: gr2m/create-or-update-pull-request-action@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
