@@ -60,7 +60,7 @@ jobs:
       with:
         commit-message: "Update README score"
       env:
-        GITHUB_TOKEN: ${{ secrets.UPDATE_SCORE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Clean Build
       run: make clean
