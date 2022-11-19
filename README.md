@@ -120,31 +120,31 @@ s32 is_drumstick_unlocked(void) {
 ```
 
 <!-- README_SCORE_BEGIN -->
-As of October 28, 2022, this is our current score:
+As of November 18, 2022, this is our current score:
 ```
- =======================================================
-         ADVENTURE ONE (ASM -> C Decompilation)
- ------------------- 34.09% Complete -------------------
-              # Decompiled functions: 1306
-               # GLOBAL_ASM remaining: 527
-              # NON_MATCHING functions: 12
-           # NON_EQUIVALENT WIP functions: 92
- --------------------- Game Status ---------------------
-        Balloons: 17/47, Keys: 2/4, Trophies: 1/5
-         T.T. Amulets: 1/4, Wizpig Amulets: 1/4
- -------------------------------------------------------
- We are battling in Icicle Pyramid. (2 opponents remain)
- =======================================================
-          ADVENTURE TWO (Cleanup & Documentation)
- -------------------  6.73% Complete -------------------
-               # Documented functions: 221
-             # Undocumented remaining: 1612
- --------------------- Game Status ---------------------
-        Balloons: 4/47, Keys: 0/4, Trophies: 0/5
-         T.T. Amulets: 0/4, Wizpig Amulets: 0/4
- -------------------------------------------------------
-        We are racing in Ancient Lake. (Lap 2/3)
- =======================================================
+ =================================================================
+              ADVENTURE ONE (ASM -> C Decompilation)
+ ------------------------ 37.71% Complete ------------------------
+                   # Decompiled functions: 1348
+                    # GLOBAL_ASM remaining: 488
+                    # NON_MATCHING functions: 9
+                # NON_EQUIVALENT WIP functions: 92
+ -------------------------- Game Status --------------------------
+             Balloons: 18/47, Keys: 2/4, Trophies: 1/5
+              T.T. Amulets: 2/4, Wizpig Amulets: 1/4
+ -----------------------------------------------------------------
+ We are collecting silver coins in Walrus Cove. (8/8 silver coins)
+ =================================================================
+               ADVENTURE TWO (Cleanup & Documentation)
+ ------------------------  9.24% Complete ------------------------
+                    # Documented functions: 244
+                  # Undocumented remaining: 1592
+ -------------------------- Game Status --------------------------
+             Balloons: 6/47, Keys: 1/4, Trophies: 0/5
+              T.T. Amulets: 0/4, Wizpig Amulets: 0/4
+ -----------------------------------------------------------------
+             We are racing in Jungle Falls. (Lap 1/3)
+ =================================================================
 ```
 <!-- README_SCORE_END -->
 
